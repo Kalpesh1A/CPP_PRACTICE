@@ -1,0 +1,137 @@
+#C++ developed by  Bajane stratshope IN 1974
+#It is fast programming language
+#High performance
+#IOSTREAM--->HEADRER FILE :INPUT OUTPUT FILE
+#lOW LEVEL LANGUAGE NEAR TO HARDWARE
+
+#VARIABLE : DATA CONTAINER WHICH STORES THE DATA.
+#LOCAL VARIABLE : THEY ARE DECLARED INSIDE BRACES OF ANY FUNCTION CAN BE ACCESSED FROM ONLY THERE.
+#GLOBAL VARIABLE : THEY CAN ACCESS ANYWHERE AND OUTSIDE OF ANY FUCTION.
+#Note: variable are case sensative means variable of same name in small leters and capital letters are different.
+
+//booldatatype
+ bool a=true;
+cout<<a<<endl;
+//It always consider 0 or 1 means false and true respectively (but in small letter)
+
+#INPUT-OUTPUT IN CPP: EX.IOSTREAM
+INPUT-STREAM:DIRECTION OF FLOW OF BYTES TAKE PLACE FROM INPUT DEVICE i.e KEYBOARD TO MAIN-MEMORY
+OUTPUT-STREAM:DIRECTION OF FLOW OF BYTES FROM MAIN-MEMORY TO DIPLAY
+THAT IS KEYBOARD->MAIN-MEMORY->DISPLAY
+//  << -> INSERTION OPERATOR
+//  << -> EXTRACTION OPERATOR
+
+#SIZE OF DATA TYPES IN 64 BIT :
+INT -> 4 BYTES      JAVA 4
+LONG -> 4 BYTES      JAVA 8
+FLOAT -> 4 BYTES     JAVA 4
+DOUBLE -> 8 BYTES       JAVA 8
+CHAR -> 1 BYTES
+
+#HEADER FILES: TWO TYPES
+1.SYSTEM HEADER FILE : IT COMES WITH COMPILER.
+// Standard iostream objects -*- C++ -*-
+
+// Copyright (C) 1997-2018 Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/iostream
+ *  This is a Standard C++ Library header.
+ */
+
+//
+// ISO C++ 14882: 27.3  Standard iostream objects
+//
+
+#ifndef _GLIBCXX_IOSTREAM
+#define _GLIBCXX_IOSTREAM 1
+
+#pragma GCC system_header
+
+#include <bits/c++config.h>
+#include <ostream>
+#include <istream>
+
+namespace std _GLIBCXX_VISIBILITY(default)
+{
+_GLIBCXX_BEGIN_NAMESPACE_VERSION
+
+  /**
+   *  @name Standard Stream Objects
+   *
+   *  The &lt;iostream&gt; header declares the eight <em>standard stream
+   *  objects</em>.  For other declarations, see
+   *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html
+   *  and the @link iosfwd I/O forward declarations @endlink
+   *
+   *  They are required by default to cooperate with the global C
+   *  library's @c FILE streams, and to be available during program
+   *  startup and termination. For more information, see the section of the
+   *  manual linked to above.
+  */
+  //@{
+  extern istream cin;		/// Linked to standard input
+  extern ostream cout;		/// Linked to standard output
+  extern ostream cerr;		/// Linked to standard error (unbuffered)
+  extern ostream clog;		/// Linked to standard error (buffered)
+
+#ifdef _GLIBCXX_USE_WCHAR_T
+  extern wistream wcin;		/// Linked to standard input
+  extern wostream wcout;	/// Linked to standard output
+  extern wostream wcerr;	/// Linked to standard error (unbuffered)
+  extern wostream wclog;	/// Linked to standard error (buffered)
+#endif
+  //@}
+
+  // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  static ios_base::Init __ioinit;
+
+_GLIBCXX_END_NAMESPACE_VERSION
+} // namespace
+
+#endif /* _GLIBCXX_IOSTREAM */
+
+2.USER DEFINED HEADER FILE : IT IS WRITTEN BY THE PROGRAMMER.
+- cuurent working drectory #include "Test.h"
+#operators :
+1.Assinment : ex.int a=10;
+2.comparion >,<,==,>=,<=
+3.increment-decrement
+4.logical ---> andand , or , notequal
+5. bool --->1(true) and 0(false)//not operator just for reference
+
+#Setw ---> used for spaces
+int a=10;
+cout<<"A="<<a<<endl;
+cout<<"A="<<setw(5)<<a<<endl;
+
+#pointer -->data type which hold the address of another data type
+
+
+
+#Access Modifiers:
+public : can accesed outside of class using object
+private : it is class level modifier can be accessed in only in same class
+protected: protected==private but difference is that protected can be accessed in child class
+
+
+Friend Fuction: Friend function are declared outside of class they are not memeber of class but they can aceess private data of class also if that class is friend of that function
